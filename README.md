@@ -9,11 +9,11 @@ Trong bài này chúng ta cùng tìm hiểu facial landmark detector mới trong
 * 2 điểm cho mắt phải
 * 1 điểm cho mũi
 
-Phiên bản mới 5 facial landmaarks này hay được ứng cho **face alignment** - sắp xếp khuôn mặt (xoay) để khuôn mặt thẳng đứng 2 mắt ngang nhau. Face alignment có thể được ứng dụng trong bước tiền xử lý ảnh khuôn mặt trước khi đưa vào mạng để nhận **face encoding** (ví dụ trong model hình FaceNet) nhằm giúp tăng độ chính xác của mô hình.
+Phiên bản mới 5 facial landmarks này hay được ứng cho **face alignment** - sắp xếp khuôn mặt (xoay) để khuôn mặt thẳng đứng 2 mắt ngang nhau. Face alignment có thể được ứng dụng trong bước tiền xử lý ảnh khuôn mặt trước khi đưa vào mạng để nhận **face encoding** (ví dụ trong model FaceNet để nhận diện khuôn mặt) nhằm tăng độ chính xác của mô hình.
 
-Ok, đi vào chủ đề chính nào. Cùng xem dlib có thể giúp chúng ta phát hiện 5 facial landmarks với phiên bản nhẹ hơn như thế nào. Cách làm cũng giống với phiên bản gốc 68 điểm. Trong bài này mình làm với video, các bạn có thể modify một chút để làm với ảnh. Kết quả chạy mượt hơn so với phiên bản cũ nhỉ.
+Ok, đi vào chủ đề chính nào. Cùng xem dlib có thể giúp chúng ta phát hiện 5 facial landmarks với phiên bản nhẹ hơn như thế nào. Cách làm cũng giống với phiên bản gốc 68 điểm. Trong bài này mình làm với video từ webcam, các bạn có thể modify một chút để làm với ảnh. Kết quả chạy mượt hơn so với phiên bản cũ nhỉ.
 
-Đây là phần implementation
+Đây là phần implementation cho 5 facial landmarks:
 ```python
 video = cv2.VideoCapture(0)
 
